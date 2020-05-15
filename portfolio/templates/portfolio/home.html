@@ -1,5 +1,9 @@
 <h1>This is home Page</h1>
 
+{% load static %}
+
+<img src="{% static 'portfolio\Capture1.JPG' %}">
+<a href="{% static 'portfolio\Rahul_Gaziabad_Resume.pdf' %}">Resume</a>
 {% for project in projects %}
 <h2>{{ project.title }}</h2>
 <h3>{{ project.description }}</h3>
@@ -8,5 +12,3 @@
 <br><a href='{{project.url}}'>LINK</a>
 {% endif %}
 {% endfor %}
-
-<br>
