@@ -1,8 +1,8 @@
 <h1>Blog page</h1>
 
-{% for blog_project in blog_projects %}
-<h2>  {{ blog_project.title }} </h2>
-<p> {{blog_project.description}} </p>
+{% for blog in blog_projects %}
+<a href="{% url 'blog:detail' blog.id %}">{{blog.title}}</a>
+<p>{{ blog.date}}</p>
+<p> {{blog.description}} </p>
 <br>
-{{ blog_project.date}}
 {% endfor %}
